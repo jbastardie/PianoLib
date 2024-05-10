@@ -38,7 +38,9 @@ publishing {
             version = "1.6"
             pom {
                 packaging = "jar"
-                version = "1.0.13-sources"
+            }
+            artifact("${buildDir}/libs/PianoLib-${version}.jar") {
+                builtBy()
             }
         }
     }
