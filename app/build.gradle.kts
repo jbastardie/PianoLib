@@ -8,7 +8,6 @@ android {
     compileSdk = 34
 
     defaultConfig {
-
         applicationId = "com.jbastardie.pianolib"
         minSdk = 24
         targetSdk = 34
@@ -35,9 +34,9 @@ publishing {
         create<MavenPublication>("mavenJava") {
             groupId = "com.jbastardie.pianolib"
             artifactId = "pianolib"
-            version = "1.6"
+            version = "1.7"
             pom {
-                packaging = "sources"
+                version = "1.0.16-sources"
             }
         }
     }
