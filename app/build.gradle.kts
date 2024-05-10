@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pianolib"
+    namespace = "com.jbastardie.pianolib"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.pianolib"
+        applicationId = "com.jbastardie.pianolib"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -24,16 +24,16 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.example.pianolib"
+            groupId = "com.jbastardie.pianolib"
             artifactId = "pianolib"
-            version = "1.1"
+            version = "1.2"
 
         }
     }
