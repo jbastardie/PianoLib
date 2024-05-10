@@ -27,14 +27,24 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
+
 publishing {
     publications {
-        create<MavenPublication>("maven") {
+        register<MavenPublication>("release") {
             groupId = "com.jbastardie.pianolib"
             artifactId = "pianolib"
-            version = "1.2"
+            version = "1.3"
 
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
