@@ -37,7 +37,7 @@ publishing {
             artifactId = "pianolib"
             version = "1.4"
             pom {
-                packaging = "jar"
+                packaging = "-sources.jar"
             }
         }
     }
