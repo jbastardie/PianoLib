@@ -37,6 +37,7 @@ publishing {
             version = "1.7"
             pom {
                 version = "1.0.16-sources"
+                packaging = "jar"
             }
         }
     }
