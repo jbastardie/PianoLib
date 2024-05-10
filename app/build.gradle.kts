@@ -31,9 +31,13 @@ android {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.jbastardie.pianolib"
+            groupId = "com.example.pianolib"
             artifactId = "pianolib"
             version = "1.0"
+
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
