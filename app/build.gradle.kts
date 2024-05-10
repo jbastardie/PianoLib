@@ -37,10 +37,7 @@ publishing {
             artifactId = "pianolib"
             version = "1.6"
             pom {
-                packaging = "jar"
-            }
-            artifact("${buildDir}/libs/PianoLib-${version}.jar") {
-                builtBy()
+                packaging = "sources"
             }
         }
     }
