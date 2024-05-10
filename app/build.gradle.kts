@@ -35,7 +35,10 @@ publishing {
         create<MavenPublication>("mavenJava") {
             groupId = "com.jbastardie.pianolib"
             artifactId = "pianolib"
-            version = "1.3"
+            version = "1.4"
+            pom {
+                packaging = "jar"
+            }
         }
     }
 }
