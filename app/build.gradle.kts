@@ -33,11 +33,8 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.example.pianolib"
             artifactId = "pianolib"
-            version = "1.0"
+            version = "1.1"
 
-            afterEvaluate {
-                from(components["release"])
-            }
         }
     }
 }
