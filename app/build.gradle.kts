@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.androidApplication)
+    id("com.android.library")
     `maven-publish`
 }
 
@@ -8,12 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.jbastardie.pianolib"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.2"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -32,13 +27,9 @@ android {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            groupId = "com.jbastardie.pianolib"
+            groupId = "com.github.jbastardie"
             artifactId = "pianolib"
             version = "1.7"
-            pom {
-                version = "1.0.16-sources"
-                packaging = "jar"
-            }
         }
     }
 }
