@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PianoLib"
 include(":app")
+include(":pianolibmodule")
