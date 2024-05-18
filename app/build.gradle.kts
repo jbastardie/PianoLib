@@ -23,15 +23,14 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("ReleaseAar") {
-                artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
-                groupId = "com.github.jbastardie"
-                artifactId = "app"
-                version = "1.7"
-            }
+
+publishing {
+    publications {
+        create<MavenPublication>("ReleaseAar") {
+            groupId = "com.github.jbastardie"
+            artifactId = "app"
+            version = "1.7"
+            afterEvaluate {artifact("$buildDir/outputs/aar/${artifactId}-release.aar")}
         }
     }
 }
