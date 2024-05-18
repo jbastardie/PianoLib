@@ -30,7 +30,7 @@ publishing {
             groupId = "com.github.jbastardie"
             artifactId = "app"
             version = "1.7"
-            afterEvaluate {artifact("$buildDir/outputs/aar/${artifactId}-release.aar")}
+            afterEvaluate {artifact(tasks.getByName("bundleReleaseAar"))}
         }
     }
 }
