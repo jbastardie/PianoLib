@@ -26,9 +26,10 @@ android {
 
 publishing {
     publications {
-        create<MavenPublication>("mavenJava") {
+        create<MavenPublication>("ReleaseAar") {
+            artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
             groupId = "com.github.jbastardie"
-            artifactId = "pianolib"
+            artifactId = "app"
             version = "1.7"
         }
     }
