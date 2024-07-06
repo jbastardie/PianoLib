@@ -18,7 +18,7 @@
         <com.jbastardie.pianolib.MusicBarView
             android:id="@+id/viewMu"
             android:layout_width="184dp"
-            android:layout_height="231dp"
+            android:layout_height="152dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@color/white">
@@ -32,8 +32,8 @@
                 android:scaleX="2.5"
                 android:scaleY="1"
                 android:translationX="100dp"
-                app:noteDuration="G_KEY"
-                app:noteValue="G_KEY"
+                app:noteDuration="BASS_KEY"
+                app:noteValue="BASS_KEY"
                 tools:visibility="visible" />
         </com.jbastardie.pianolib.MusicBarView>
 

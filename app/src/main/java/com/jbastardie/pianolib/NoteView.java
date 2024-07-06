@@ -86,6 +86,10 @@ public class NoteView extends View
         {
             backgroundImageId = R.drawable.sol;
         }
+        else if(noteData.getNoteDuration() == NoteData.NoteDuration.BASS)
+        {
+            backgroundImageId = R.drawable.bass;
+        }
         else
         {
             backgroundImageId = R.drawable.whole_note;

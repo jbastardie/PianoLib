@@ -20,7 +20,8 @@ public class NoteData
         HIGHER_E(10),
         HIGHER_F(11),
         HIGHER_G(12),
-        G_KEY(12);
+        G_KEY(2),
+        BASS(5);
 
         private int value;
         NoteValue(int value)
@@ -46,7 +47,8 @@ public class NoteData
         FOURTH,
         HALF,
         WHOLE,
-        G_KEY;
+        G_KEY,
+        BASS;
     }
 
 
