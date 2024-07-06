@@ -65,7 +65,7 @@ public class MusicBarView extends ViewGroup
         // Draw all the black areas
         for (int i = 0; i < NUM_DEFINITE_BLACK_AREA; ++i)
         {
-            float yLineCenter = linePositions.get(i) + (musicBarBlack.getStrokeWidth() / 2);
+            float yLineCenter = linePositions.get(i) + 10 + (musicBarBlack.getStrokeWidth() / 2);
             canvas.drawLine(xTopLeft, yLineCenter, xTopLeft + width, yLineCenter, musicBarBlack);
         }
 
@@ -114,7 +114,7 @@ public class MusicBarView extends ViewGroup
         musicBarBlack.setStrokeWidth(blackLineHeight);
 
         float whiteAreaHeight = PERCENT_HEIGHT_WHITE_AREA * this.height;
-        float startVal = 0;
+        float startVal = whiteAreaHeight;
         for(int i = 0; i < NUM_POSSIBLE_BLACK_AREA; ++i)
         {
             linePositions.add(startVal);
@@ -147,7 +147,7 @@ public class MusicBarView extends ViewGroup
             {
                 int noteTop = (int) (this.height - blackLineHeight
                         - (notes.get(i).getNoteValue().getValue() * incrementValue)
-                        - (v.getMeasuredHeight() * PERCENT_NOTE_OVAL));
+                        - (v.getMeasuredHeight() * PERCENT_NOTE_OVAL) + PERCENT_HEIGHT_WHITE_AREA * this.height);
                 v.layout(leftStartVal, noteTop, leftStartVal + v.getMeasuredWidth(), noteTop + v.getMeasuredHeight());
             }
         }

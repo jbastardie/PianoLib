@@ -15,6 +15,8 @@
             <enum name="HIGHER_E" value="10" />
             <enum name="HIGHER_F" value="11" />
             <enum name="HIGHER_G" value="12" />
+            <enum name="G_KEY" value="5" />
+            <enum name="BASS_KEY" value="5" />
         </attr>
         <attr name="noteDuration" format="enum">
             <enum name="SIXTEENTH" value="0" />
@@ -22,6 +24,8 @@
             <enum name="FOURTH" value="2" />
             <enum name="HALF" value="3" />
             <enum name="WHOLE" value="4" />
+            <enum name="G_KEY" value="4" />
+            <enum name="BASS_KEY" value="4" />
         </attr>
     </declare-styleable>
 </resources>

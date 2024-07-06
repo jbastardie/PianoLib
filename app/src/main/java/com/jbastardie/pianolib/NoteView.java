@@ -82,6 +82,10 @@ public class NoteView extends View
                 backgroundImageId = R.drawable.half_note_stem_facing_up;
             }
         }
+        else if(noteData.getNoteDuration() == NoteData.NoteDuration.G_KEY)
+        {
+            backgroundImageId = R.drawable.sol;
+        }
         else
         {
             backgroundImageId = R.drawable.whole_note;
